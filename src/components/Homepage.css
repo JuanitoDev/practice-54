@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Nunito:wght@200;300;400;600;700;800&display=swap");
+
+/* font-family: "Lato", sans-serif; */
+/* font-family: "Nunito", sans-serif; */
+
+.body {
+  font-family: lato;
+  display: flex;
+  background-color: #fdfaec;
+  height: 800px;
+  padding: 4rem;
+}
+
+.list-spaces {
+  list-style: none;
+}
+
+.btn {
+  font-weight: 400;
+  background-color: #ff5959;
+  color: white;
+}
+
+.logo {
+  height: 5em;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+.container {
+  width: 5rem;
+}

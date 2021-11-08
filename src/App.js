@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
 import { getUserWithStoredToken } from "./store/user/actions";
 import { Jumbotron } from "react-bootstrap";
+import WIP from "./SVG/wip.svg";
 
 const Home = () => (
   <Jumbotron>
@@ -21,7 +22,18 @@ const Home = () => (
 );
 const Other = () => (
   <Jumbotron>
-    <h1>Other</h1>
+    <img
+      style={{
+        height: "24em",
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "50%",
+        marginTop: "4em",
+      }}
+      src={WIP}
+      alt="work in progress"
+    />
   </Jumbotron>
 );
 
