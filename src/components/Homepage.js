@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSpaces, spacesFetched } from "../store/spaces/actions";
+import { fetchSpaces } from "../store/spaces/actions";
 import { selectSpaces } from "../store/spaces/selectors";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   const dispatch = useDispatch();
@@ -14,14 +15,15 @@ export default function Homepage() {
   }, []);
   return (
     <div className="body">
-      <h1>Hello from Homepage!</h1>
       {!spaces
         ? "No spaces"
         : spaces.map((space, i) => {
             return (
               <div key={i}>
-                <p>{space.title}</p>
-                {/* <button onClick={() => dispatch(removePost(i))}>x</button> */}
+                <h3>{space.title}</h3>
+                <Link to={`/spaces/${space.id}`}>
+                  <button className="btn">Visit Space</button>
+                </Link>
               </div>
             );
           })}
