@@ -20,18 +20,22 @@ export default function Homepage() {
         ? "No spaces"
         : spaces.map((space, i) => {
             return (
-              <div className="container" key={i}>
+              <div
+                className="container"
+                key={i}
+                style={{
+                  boxShadow: "5px 5px 5px #e1e1e1",
+                  padding: "2em",
+                  margin: "1em",
+                  height: "30rem",
+                  textAlign: "left",
+                  lineHeight: "2em",
+                  backgroundColor: "white",
+                  width: "100%",
+                }}
+              >
                 <ul className="list-spaces">
-                  <li
-                    style={{
-                      boxShadow: "5px 5px 5px #e1e1e1",
-                      padding: "2em 2em 6em 2em",
-                      margin: "1em",
-                      height: "20rem",
-                      textAlign: "left",
-                      lineHeight: "2em",
-                    }}
-                  >
+                  <li>
                     <h3
                       style={{
                         fontWeight: 600,

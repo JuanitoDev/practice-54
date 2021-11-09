@@ -1,6 +1,7 @@
 const initialState = {
   loading: true,
   spaces: [],
+  spaceDetails: null,
 };
 
 export default function reducer(state = initialState, action) {
