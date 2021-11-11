@@ -14,6 +14,7 @@ export default function Homepage() {
   useEffect(() => {
     dispatch(fetchSpaces);
   }, []);
+
   return (
     <div className="body">
       {!spaces
@@ -24,7 +25,7 @@ export default function Homepage() {
                 className="container"
                 key={i}
                 style={{
-                  boxShadow: "5px 5px 5px #e1e1e1",
+                  // boxShadow: "5px 5px 5px #e1e1e1",
                   padding: "2em",
                   margin: "1em",
                   height: "30rem",

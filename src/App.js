@@ -15,28 +15,7 @@ import { getUserWithStoredToken } from "./store/user/actions";
 import { Jumbotron } from "react-bootstrap";
 import WIP from "./SVG/wip.svg";
 import Detailspage from "./components/Detailspage";
-
-const Home = () => (
-  <Jumbotron>
-    <Homepage />
-  </Jumbotron>
-);
-const Other = () => (
-  <Jumbotron>
-    <img
-      style={{
-        height: "24em",
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "50%",
-        marginTop: "4em",
-      }}
-      src={WIP}
-      alt="work in progress"
-    />
-  </Jumbotron>
-);
+import MySpace from "./components/MySpace/MySpace";
 
 function App() {
   const dispatch = useDispatch();
@@ -53,10 +32,10 @@ function App() {
       {isLoading ? <Loading /> : null}
       <Switch>
         <Route path="/spaces/:id" component={Detailspage} />
-        <Route path="/other" component={Other} />
+        <Route path="/myspace" component={MySpace} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Homepage} />
       </Switch>
     </div>
   );

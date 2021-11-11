@@ -11,7 +11,12 @@ export default function LoggedIn() {
   return (
     <>
       <Nav.Item>{user.email}</Nav.Item>
-      <Button onClick={() => dispatch(logOut())}>Logout</Button>
+      <Button
+        onClick={() => dispatch(logOut())}
+        style={{ backgroundColor: "#FF5959", borderStyle: "none" }}
+      >
+        Logout
+      </Button>
     </>
   );
 }
