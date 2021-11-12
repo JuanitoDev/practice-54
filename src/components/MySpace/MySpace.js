@@ -2,7 +2,12 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { fetchASpace, spacesFetched } from "../../store/spaces/actions";
+import {
+  deleteStory,
+  fetchASpace,
+  spacesFetched,
+} from "../../store/spaces/actions";
+
 import { selectUserSpace } from "../../store/spaces/selectors";
 import "./MySpace.css";
 import moment from "moment";
@@ -21,7 +26,7 @@ export default function MySpace() {
   return (
     <div
       style={{
-        backgroundColor: "#F8F9FA",
+        backgroundColor: "white",
       }}
     >
       <div
@@ -87,7 +92,7 @@ export default function MySpace() {
                     padding: "2em",
                     margin: "1em",
                     border: "1px solid #e3e3e3",
-                    marginTop: "3em",
+                    marginTop: "2em",
                     backgroundColor: "white",
                   }}
                 >
@@ -124,6 +129,7 @@ export default function MySpace() {
                         border: "none",
                         backgroundColor: "white",
                       }}
+                      onClick={() => dispatch(deleteStory(story.id))}
                     >
                       Delete
                     </button>

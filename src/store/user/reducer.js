@@ -3,10 +3,12 @@ import { LOG_OUT, LOGIN_SUCCESS, TOKEN_STILL_VALID } from "./actions";
 const initialState = {
   token: localStorage.getItem("token"),
   name: null,
-  email: null
+  email: null,
+  id: null,
+  space: null,
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS:
       localStorage.setItem("token", action.payload.token);
@@ -19,7 +21,12 @@ export default (state = initialState, action) => {
     case TOKEN_STILL_VALID:
       return { ...state, ...action.payload };
 
+    case "user/gotMySpace":
+      return { ...state, space: action.payload };
+
     default:
       return state;
   }
 };
+
+export default reducer;

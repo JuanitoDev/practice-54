@@ -5,10 +5,11 @@
 
 .body {
   font-family: lato;
-  display: flex;
-  background-color: #fdfaec;
-  height: 800px;
-  padding: 4rem;
+  background-color: white;
+  align-content: center;
+  width: 700px;
+  margin: auto;
+  columns: 2;
 }
 
 .list-spaces {
